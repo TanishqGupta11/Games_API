@@ -17,7 +17,7 @@ class Game(models.Model):
         related_name='games',
         on_delete=models.CASCADE
     )
-    release_date = models.DateTimeField()
+    release_date = models.DateTimeField(auto_now_add=True)
     played = models.BooleanField(default=False)
 
     class Meta:
@@ -58,7 +58,7 @@ class PlayerScore(models.Model):
         on_delete=models.CASCADE
     )
     score = models.IntegerField()
-    score_date = models.DateTimeField()
+    score_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         #order by score descending not by default ascending.

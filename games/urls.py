@@ -2,10 +2,10 @@ from django.conf.urls import url
 from games import views
 
 urlpatterns = [
-    url(r'^game-categories/$',
+    url(r'^game-category/$',
         views.GameCategoryList.as_view(),
         name=views.GameCategoryList.name),
-    url(r'^game-categories/(?P<pk>[0-9]+)/$',
+    url(r'^game-category/(?P<pk>[0-9]+)/$',
         views.GameCategoryDetail.as_view(),
         name=views.GameCategoryDetail.name),
 
@@ -34,6 +34,6 @@ urlpatterns = [
         views.APIRoot.as_view(),
         name=views.APIRoot.name),
     
-    
+
       
 ]
